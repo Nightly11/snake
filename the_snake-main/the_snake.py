@@ -174,6 +174,8 @@ def main():
     # Создание экземпляров классов:
     apple = Apple()
     snake = Snake()
+    while apple.position in snake.positions:
+        apple.randomize_position()
 
     while True:
         clock.tick(SPEED)
@@ -190,6 +192,9 @@ def main():
         if snake.get_head_position() in snake.positions[1:]:
             snake.reset()
             screen.fill(BOARD_BACKGROUND_COLOR)
+
+        while apple.position in snake.positions:
+            apple.randomize_position()
 
         snake.draw()
 
