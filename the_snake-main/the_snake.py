@@ -1,7 +1,7 @@
 
 """Игра «Змейка», реализованная с использованием Pygame."""
 
-from random import choice, randint
+from random import randint
 
 import pygame
 
@@ -200,4 +200,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
